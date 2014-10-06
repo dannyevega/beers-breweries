@@ -1,0 +1,18 @@
+<div class="beer-info">
+<h1>Beer Information</h1>
+
+  <h3>Brewery:</h3>
+  <%= @beer.brewery.name %>
+
+  <h3>Beer Score:</h3>
+  <%= @beer.score %><br><br>
+
+  <a href="/beers/<%= @beer.id %>/edit">update</a>
+
+  <form style="text-align: center" action="/beers/<%= @beer.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input class="delete" type="submit" value="delete">
+  </form>
+
+</div>
+

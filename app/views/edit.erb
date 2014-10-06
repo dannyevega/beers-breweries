@@ -1,0 +1,9 @@
+<h2 style="text-align: center">Update beer information</h2>
+<form style="text-align: center" action="/beers/<%= @beer.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  Brewery:<input type="text" name="brewery" value="<%= @beer.brewery.name %>"><br>
+  Brewery location:<input type="text" name="location" value="<%= @beer.brewery.location %>"><br>
+  Beer name:<input type="text" name="name" value="<%= @beer.name %>"><br>
+  Beer score: <input type="text" name="score" value="<%= @beer.score.to_s %>"><br>
+  <input type="submit" value="Save">
+</form>

@@ -1,0 +1,12 @@
+<h1 style="text-align: center">Beers and Breweries</h1>
+
+<div class="new-beer">
+  <a href="/beers/new">Create new beer</a>
+</div>
+
+<ul>
+  <% @beers.each do |beer| %>
+    <li><a href="/beers/<%= beer.id %>"><%= beer.name %></a></li>
+  <% end %>
+</ul>
+
